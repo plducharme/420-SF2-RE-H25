@@ -14,6 +14,7 @@ class Pomme:
             raise ValueError("Le prix doit être positif")
         self._prix = prix
 
+
 grannysmith = Pomme("verte", "Granny Smith", 0.75)
 print(grannysmith.get_prix())
 grannysmith.set_prix(0.50)
