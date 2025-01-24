@@ -8,6 +8,7 @@ class Saison(Enum):
     AUTOMNE = 3
     HIVER = 4
 
+
 print(Saison.PRINTEMPS)
 print(Saison.PRINTEMPS.name)
 print(Saison.PRINTEMPS.value)

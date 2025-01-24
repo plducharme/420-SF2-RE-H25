@@ -28,11 +28,10 @@ class Voiture:
         def arreter(self):
             print("Arrêt du moteur")
 
+
 # Création d'une instance de la classe en appelant le constructeur __init__(self, marque. modele)
 challenger = Voiture("Dodge", "Challenger")
 # accès à la classe interne
 challenger.moteur.demarrer()
 # appel d'une méthode de l'objet
 challenger.vroom()
-
-
