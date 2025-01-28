@@ -30,7 +30,7 @@ class Livre(object):
     # Cette méthode privée est statique, car elle n'utilise pas d'attributs de l'objet ou de la classe
     # Cette notion sera vue dans un cours ultérieur
     @staticmethod
-    def __valider_prix(self, prix):
+    def __valider_prix(prix):
         if prix < 0:
             raise ValueError("Le prix doit être positif")
         return prix
