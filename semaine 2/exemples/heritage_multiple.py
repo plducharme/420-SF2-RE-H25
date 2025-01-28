@@ -10,7 +10,6 @@ class Aigle:
         print("Hiiiiiiiiiiii!!")
 
 
-
 class Licorne:
 
     def __init__(self):
