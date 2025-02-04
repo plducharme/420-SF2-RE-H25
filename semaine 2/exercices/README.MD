@@ -17,7 +17,7 @@
 - Ajouter une méthode pour ajouter un instrument à l'orchestre basé sur un nom d'instrument passé en paramètre
 - Ajouter une méthode pour jouer un morceau (un instrument à la fois)
 
-# Créer une classe représentant un cours d'informatique
+# Créer des classes représentant un cours d'informatique
 4) Créer les classes pour représenter un cours d'informatique
 - Classe Personne
   - Cette classe devra contenir des propriétés représentant une personne

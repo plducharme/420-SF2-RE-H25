@@ -3,6 +3,7 @@ class Personnage:
     def __init__(self):
         print("Personnage créé")
 
+
 # Comme on défini un constructeur, le constructeur de la classe parent n'est pas appelé automatiquement,
 # il faut le faire explicitement
 class Corsaire(Personnage):
