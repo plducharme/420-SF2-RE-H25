@@ -44,10 +44,10 @@
         - defense
           - float: la défense du monstre
     - Ajouter deux méthodes abstraites
-      - attaquer(pourcentage_de_touche: float) : méthode abstraite qui retourne un entier représentant les dégâts infligés
+      - attaquer(self, pourcentage_de_touche: float) : méthode abstraite qui retourne un entier représentant les dégâts infligés
         - Les dégats infligés sont calculés en fonction
         - Les dégats sont effectués si un nombre aléatoire entre 0 et 1 est inférieur ou égal au pourcentage de touche
-      - defendre(pourcentage_de_touche: float) : méthode abstraite qui retourne un entier représentant les dégâts reçus
+      - defendre(self, pourcentage_de_touche: float) : méthode abstraite qui retourne un entier représentant les dégâts reçus
         - Les dégats reçus sont calculés en fonction de la défense du monstre
         - Les dégats sont reçus si un nombre aléatoire entre 0 et 1 est inférieur ou égal au pourcentage de touche
 4) Implémenter une classe enfant de Monstre nommée "Kobold"
