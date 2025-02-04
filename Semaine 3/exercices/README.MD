@@ -56,10 +56,10 @@
     - Ajouter une propriété nommée "butin" qui représente le butin que le monstre donne au joueur
       - Le butin est un nombre aléatoire entre 0 et 100
       - Le butin est donné au joueur si le monstre est vaincu
-5) Créer une classe "JeuDeRole" qui implémente un logique de base pour le jeu
+5) Créer une classe "JeuDeRole" qui implémente une logique de base pour le jeu
     - Créer une boucle while qui continue tant que le joueur et le monstre ont de la santé
 
-6) Comment pourrions nous changer le design des classes abstraites pour accommoder le fait que Classe et Monstres ont des propriétés et des méthodes en commun?
+6) Comment pourrions-nous changer le design des classes abstraites pour accommoder le fait que Classe et Monstres ont des propriétés et des méthodes en commun?
 
 # Explorer la bibliothèque Pandas
 1) Installer le package pandas
