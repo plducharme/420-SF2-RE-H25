@@ -1,5 +1,6 @@
 from datetime import date
 
+
 class Personne:
 
     # variable de classe
@@ -18,7 +19,7 @@ class Personne:
     @classmethod
     def from_annee_naissance(cls, nom, date_naissance: date):
         age = cls.calculer_age(date_naissance)
-        return cls(nom, )
+        return cls(nom, age)
 
     # Cette méthode va calculer l'âge de la personne en fonction de la date de naissance
     # On peut remarquer que cette méthode utilise seulement des variables passées en paramètre

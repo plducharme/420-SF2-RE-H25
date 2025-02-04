@@ -14,6 +14,7 @@ class Carre(Polygone):
     def afficher_nb_cotes(self):
         print('Carre ' + str(4))
 
+
 class Triangle(Polygone):
     # Implémentation de la méthode abstraite
     def afficher_nb_cotes(self):
