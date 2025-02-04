@@ -18,10 +18,10 @@
     - Les propriétés doivent être protégées
     - Utiliser les décorateurs @property et @propriete.setter
     - Ajouter 2 méthodes abstraites
-      - attaquer(pourcentage_de_touche: float) : méthode abstraite qui retourne un entier représentant les dégâts infligés
+      - attaquer(self, pourcentage_de_touche: float) : méthode abstraite qui retourne un entier représentant les dégâts infligés
         - Les dégats infligés sont calculés en fonction de l'attaque ou la magie du personnage si le pourcentage de touche est respecté
           - Les dégats sont effectués si un nombre aléatoire entre 0 et 1 est inférieur ou égal au pourcentage de touche
-      - defendre(pourcentage_de_touche: float) : méthode abstraite qui retourne un entier représentant les dégâts reçus
+      - defendre(self, pourcentage_de_touche: float) : méthode abstraite qui retourne un entier représentant les dégâts reçus
         - Les dégats reçus sont calculés en fonction de la défense du personnage si le pourcentage de touche est respecté
           - Les dégats sont reçus si un nombre aléatoire entre 0 et 1 est inférieur ou égal au pourcentage de touche
 2) Créer deux classes enfants qui représenteront des classes de personnage spécifiques: guerrier et mage
