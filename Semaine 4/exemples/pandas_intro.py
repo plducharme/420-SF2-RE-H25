@@ -1,6 +1,7 @@
 from pandas import DataFrame
 import matplotlib.pyplot as plt
 
+
 # Initialiser un DataFrame à partir d'un dictionnaire
 df = DataFrame({
     "Nom": ["Alice", "Bob", "Charlie", "David", "Eve"],
