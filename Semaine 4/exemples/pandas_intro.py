@@ -78,8 +78,8 @@ print(df_jeux)
 # voir l'import en haut du fichier
 # La figure est un conteneur pour les graphiques
 plt.figure(figsize=(10, 5))
-
-plt.plot(df["Nom"], df["Âge"], marker="o", color="red", linestyle="--", label="Âge")
+# Au lieu d'utiliser plt.plot(), on utilise plt.bar() pour un graphique en barres
+plt.bar(df["Nom"], df["Âge"], color="red", label="Âge")
 # Titre du graphique
 plt.title("Âge des personnes")
 # Nom des axes
@@ -89,6 +89,7 @@ plt.ylabel("Âge")
 plt.legend()
 # Afficher la grille
 plt.grid(True)
+
 # Afficher le graphique que l'on vient de configurer
 plt.show()
 

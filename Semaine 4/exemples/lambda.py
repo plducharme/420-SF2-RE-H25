@@ -1,12 +1,12 @@
 def mult(n):
     return lambda x: x * n
 
+
 doubleur = mult(2)
 print(doubleur(4))
 
 tripleur = mult(3)
 print(tripleur(4))
-
 
 carre = lambda v: v * v
 print(carre(4))
@@ -24,6 +24,7 @@ class Personne:
     @property
     def age(self):
         return self.__age
+
 
 anna = Personne('Anna', 18)
 bernard = Personne('Bernard', 16)

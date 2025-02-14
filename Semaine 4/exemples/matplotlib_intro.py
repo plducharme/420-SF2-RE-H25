@@ -33,6 +33,8 @@ plt.legend(["y = x", "y = x^2", "y = 3x"])
 plt.title("Courbes de fonctions")
 plt.xlabel("x")
 plt.ylabel("y")
+# changer la limite des axes
+plt.xlim(0, 80)
 plt.show()
 
 
