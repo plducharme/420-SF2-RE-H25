@@ -35,3 +35,5 @@ personnes.sort(key=lambda x: x.age, reverse=True)
 for personne in personnes:
     print(personne.nom + '\t' + str(personne.age))
 
+volume = lambda largeur, longueur, hauteur: largeur * longueur * hauteur
+print(volume(2, 3, 4))
