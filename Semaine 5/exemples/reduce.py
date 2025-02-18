@@ -5,13 +5,13 @@ def ajout(x, y):
     return x + y
 
 
-liste = (0, 2, 5, 7, 9)
+# un iterable (liste, tuple, etc.)
+iterable = (0, 2, 5, 7, 9)
 
 # Réduction de l'itérable liste en une valeur simple
-r = reduce(ajout, liste)
+r = reduce(ajout, iterable)
 # Convertir en liste pour faciliter l'impression
 print(r)
 # Équivalent
-r2 = reduce(lambda x, y: x + y, liste)
+r2 = reduce(lambda x, y: x + y, iterable)
 print(r2)
-

@@ -24,3 +24,6 @@ a = {x: x**2 for x in (4, 8, 9)}
 y = dict([(1, 8), (3, 90), (4, 44)])
 
 
+# Parcourir les clefs et les valeurs
+for cle, valeur in a.items():
+    print(cle, valeur)
