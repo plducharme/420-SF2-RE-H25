@@ -8,6 +8,8 @@ cm = ChainMap(peinture, films, musiques)
 # affiche la liste de clés-valeurs
 for k, v in cm.items():
     print(k, v)
+# Modification d'un dictionnaire du chainmap à l'extérieur du chainmap
+# Comme celui-ci est passé par référence, la modification est visible dans le chainmap
 peinture["La Joconde"] = "Léonard de Vinci"
 print(cm.maps)
 # Accéder via la clé, remarquez que Metropolis est dans les deux dictionnaires mais le premier trouvé est retourné

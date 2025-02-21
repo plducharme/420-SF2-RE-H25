@@ -1,5 +1,7 @@
 # Déclaration d'un dictionnaire vide
 vide = {}
+# Équivaut à
+vide = dict()
 # Déclaration d'un dictionnaire
 d = {'Nathan': 75, 'Lina': 84, 'Arthur': 69}
 # Afficher une valeur à partir d'une clé
