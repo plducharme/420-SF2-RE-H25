@@ -26,13 +26,12 @@ plt.show()
 # Créer une nouvelle figure
 plt.figure()
 # Pour travailler sur les graphiques de la même figure, on utilise subplot
-plt.subplot(131)
+# Le premier chiffre est le nombre de lignes, le deuxième le nombre de colonnes et le troisième la position du subplot
+plt.subplot(111)
 plt.plot(valeurs_x, valeurs_y)
-plt.title("Ligne")
-plt.subplot(132)
-plt.title("Points")
+plt.subplot(111)
 plt.scatter(valeurs_x, valeurs_y)
-plt.subplot(133)
+plt.subplot(111)
 plt.title("Barres")
 plt.bar(valeurs_x, valeurs_y)
 plt.show()
@@ -40,6 +39,7 @@ plt.show()
 # Projection 3D
 valeurs_z = np.array([1.0, 4.2, 3.7, 6.7, 2.9, 6.0])
 fig = plt.figure()
+# On ajoute un subplot en 3D
 ax = fig.add_subplot(111, projection="3d")
 ax.scatter(valeurs_x, valeurs_y, valeurs_z, marker="o", color="blue")
 plt.show()
