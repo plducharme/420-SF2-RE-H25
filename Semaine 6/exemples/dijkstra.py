@@ -51,12 +51,12 @@ class Graphe:
                     min_distance = distance[i]
                     courant = i
 
-
             # On récupère les distances entre le noeud courant et ses noeuds adjacents
             for i in range(self.noeuds):
                 # On vérifie si le noeud n'a pas déjà été visité et si la distance entre le noeud courant et le noeud i
                 # est plus petite que la distance actuelle
-                if not visites[i] and self.matrice_adjacence[courant][i] != 0 and distance[courant] + self.matrice_adjacence[courant][i] < distance[i]:
+                if not visites[i] and self.matrice_adjacence[courant][i] != 0 and distance[courant] + \
+                        self.matrice_adjacence[courant][i] < distance[i]:
                     # On met à jour la distance
                     distance[i] = distance[courant] + self.matrice_adjacence[courant][i]
                     # On met à jour le noeud précédent
@@ -64,7 +64,6 @@ class Graphe:
 
         # On retourne le tableau de distances et le tableau de noeuds précédents
         return distance, precedents
-
 
     def afficher_chemin(self, noeud, precedents):
         if noeud == self.index_depart:
@@ -75,7 +74,6 @@ class Graphe:
             self.afficher_chemin(precedents[noeud], precedents)
             print(f"{noeud} ", end="")
 
-
     def afficher_solution(self, distance, precedents):
 
         for i in range(self.noeuds):
@@ -84,11 +82,10 @@ class Graphe:
 
 
 graphe = [[0, 5, 3, 0, 0],
-         [0, 0, 0, 0, 0],
-         [0, 0, 0, 12, 0],
-         [6, 8, 0, 0, 7],
-         [0, 0, 0, 0, 0]]
-
+          [0, 0, 0, 0, 0],
+          [0, 0, 0, 12, 0],
+          [6, 8, 0, 0, 7],
+          [0, 0, 0, 0, 0]]
 
 g = Graphe(graphe, 0)
 distance, precedents = g.plus_court_chemin()

@@ -16,8 +16,8 @@ graph = [[0, 5, 3, 0, 0],
 # La clé représente le sommet du graphe
 # La valeur associée à la clé est une liste de tuples (identité, poids), où le premier élément du tuple est le sommet
 # adjacent et le deuxième élément est le poids de l'arête entre les sommets
-liste = { 0: [(1, 5), (2, 3)],
-          1: [],
-          2: [(3, 12)],
-          3: [(0, 6), (1, 8), (4, 7)],
-          4: [] }
+liste = {0: [(1, 5), (2, 3)],
+         1: [],
+         2: [(3, 12)],
+         3: [(0, 6), (1, 8), (4, 7)],
+         4: []}

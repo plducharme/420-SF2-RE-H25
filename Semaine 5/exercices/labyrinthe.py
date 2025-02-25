@@ -1,5 +1,6 @@
 import random
 
+
 class Cellule:
 
     def __init__(self, x: int, y: int):
@@ -59,7 +60,6 @@ class Labyrinthe:
         self._cellules = [[Cellule(x, y) for y in range(hauteur)] for x in range(largeur)]
         self.__sortie_visitee = False
 
-
     @property
     def largeur(self):
         return self.__largeur
@@ -72,14 +72,12 @@ class Labyrinthe:
     def cellules(self):
         return self._cellules
 
-
     def generer_labyrinthe(self):
         # On entre en haut à gauche et on sort en bas à droite
         entree = self._cellules[0][0]
         sortie = self._cellules[self.__largeur - 1][self.__hauteur - 1]
 
         self.visiter_voisins(entree)
-
 
     def visiter_voisins(self, cellule: Cellule):
         cellule.visitee = True
@@ -131,13 +129,11 @@ class Labyrinthe:
                 if not ouest.visitee:
                     self.visiter_voisins(ouest)
 
-
     def afficher(self):
         for x in range(self.__largeur):
             for y in range(self.__hauteur):
                 cellule = self._cellules[x][y]
                 print(cellule)
-
 
 
 labyrinthe = Labyrinthe(10, 10)
