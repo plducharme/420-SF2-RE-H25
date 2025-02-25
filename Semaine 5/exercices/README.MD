@@ -32,7 +32,7 @@ la liste positions).
 
 
 # Reduce
-Utiliser un reduce et un lambda pour trouver le total de la valeur des codes ASCII des lettres d'un mot':
+Utiliser un reduce et un lambda pour trouver le total de la valeur des codes ASCII des lettres d'un mot:
 
 - Faites-le pour un mot.
 - Essayez de le faire pour une liste de mots.
