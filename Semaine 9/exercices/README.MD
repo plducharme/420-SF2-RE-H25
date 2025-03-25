@@ -14,7 +14,7 @@
  - Ajouter le constructeur `__init__` qui initialise les attributs.
  - Encapsuler les attributs.
  - Implémenter la méthode créant le jeu de carte au complet; doit retourner une liste de Carte mélangée.
- - Implémenter les opérateurs de comparaisons pour comparer deux cartes.
+ - Implémenter les opérateurs de comparaisons pour comparer deux cartes. (trèfle < carreau < coeur < pique; 1 à 13)
  - Créer une liste de cartes avec les cartes incluses dans le fichier trier_des_cartes.py
 
 
