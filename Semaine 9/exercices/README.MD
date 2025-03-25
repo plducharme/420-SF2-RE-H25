@@ -5,7 +5,7 @@
  - Ajouter le constructeur `__init__` qui initialise les attributs.
  - Encapsuler les attributs.
  - Ajouter une méthode statique "from_date_string(date_str: str)" qui prend une date de la forme "jj/mm/aaaa" et retourne une instance de la classe Date.
- - Implémenter la méthode `__lt__` pour comparer deux dates.
+ - Implémenter les opérateurs de comparaisons pour comparer deux dates.
  - Créer une liste de dates avec les dates incluses dans le fichier trier_des_dates.py 
 
 
