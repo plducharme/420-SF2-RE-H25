@@ -54,6 +54,7 @@ print(type(series_ages))
 
 # Valide si une valeur est dans la série, retourne une série de booléens pour chaque index (ligne de la série)
 # True si la valeur est dans la série, False sinon
+print("Vérifier si 30 et 35 sont dans la série")
 print(series_ages.isin([30, 35]))
 
 # Comme isin() retourne une série de booléens, on peut l'utiliser pour filtrer les données
@@ -99,3 +100,9 @@ plt.show()
 df_grouped = df.groupby("Province").count()
 print(df_grouped)
 
+print("Itérer sur un DataFrame")
+# Itérer sur un DataFrame
+# iterrows() retourne un itérable sur les lignes du DataFrame
+# Chaque ligne est un tuple (index, Series)
+for index, ligne in df.iterrows():
+    print(f"Index: {index} Ligne: {ligne["Nom"]}, {ligne["Âge"]}, {ligne["Ville"]}, {ligne["Province"]}")
