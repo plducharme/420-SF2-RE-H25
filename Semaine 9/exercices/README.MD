@@ -19,7 +19,7 @@
 
 
 # Trier les pays les plus heureux par bulle
- - Créer une classe Pays qui contient trois attributs: nom, et score (Happiness_Score)
+ - Créer une classe Pays qui contient deux attributs: nom, et score (Happiness_Score)
  - Ajouter le constructeur `__init__` qui initialise les attributs.
  - Encapsuler les attributs.
  - Implémenter les méthodes de comparaisons pour comparer deux pays.
