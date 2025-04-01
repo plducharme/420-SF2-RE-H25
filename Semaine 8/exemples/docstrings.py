@@ -38,3 +38,11 @@ class Levier:
             return masse_objet * 9.8 * rayon_masse / rayon_bras
         else:
             return None
+
+
+if __name__ == '__main__':
+    # Création d'un levier bilatéral
+    levier = Levier(Levier.LEVIER_BILATERAL)
+    force = levier.calcul_force(10, 0.5, 1)
+    print(force)
+    print(levier.__doc__)

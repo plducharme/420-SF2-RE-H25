@@ -31,7 +31,3 @@ for i in range(6):
 ax.scatter([s[0] for s in sommets], [s[1] for s in sommets], [s[2] for s in sommets], color='black')
 # Afficher le graphique
 fig.show()
-
-
-
-

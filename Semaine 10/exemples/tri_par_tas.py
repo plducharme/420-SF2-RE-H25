@@ -24,7 +24,7 @@ class TriTas:
         index_fils_gauche = 2 * index + 1
         index_fils_droit = 2 * index + 2
 
-        # Compare le pere avec le fils gauche pour deter
+        # Compare le pere avec le fils gauche pour determiner le fils le plus grand
         if index_fils_gauche < taille and tableau[index_fils_gauche] > tableau[maximum]:
             maximum = index_fils_gauche
         if index_fils_droit < taille and tableau[index_fils_droit] > tableau[maximum]:

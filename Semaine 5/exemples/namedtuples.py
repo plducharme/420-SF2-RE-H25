@@ -16,3 +16,6 @@ d = {'x': 4, 'y': 8, 'z': 2}
 p4 = Point3D(**d)
 print(p4)
 
+d2 = {"y": 8, "x": 4, "z": 2}
+p5 = Point3D(**d2)
+print(p5)

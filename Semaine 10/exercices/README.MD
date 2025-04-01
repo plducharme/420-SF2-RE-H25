@@ -13,7 +13,7 @@
 
 # Compression
 - Au lieu d'utiliser gzip, utiliser "tarfile" pour la compression
-- Utilser tarfile puis gzip pour encoder puis faites l'opération inverse pour décompresser le contenu original 
+- Utiliser tarfile puis gzip pour encoder puis faites l'opération inverse pour décompresser le contenu original 
 
 # Codage de huffman
 - Implémenter l'algorithme de codage de Huffman pour encoder et décoder des chaînes de caractères
