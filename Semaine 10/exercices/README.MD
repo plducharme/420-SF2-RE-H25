@@ -13,8 +13,9 @@
 
 # Compression
 - Au lieu d'utiliser gzip, utiliser "tarfile" pour la compression
-- Utiliser tarfile puis gzip pour encoder puis faites l'opération inverse pour décompresser le contenu original 
+- Utiliser tarfile suivi de gzip pour encoder, puis faites l'opération inverse pour décompresser le contenu original 
 
 # Codage de huffman
 - Implémenter l'algorithme de codage de Huffman pour encoder et décoder des chaînes de caractères
 - Encoder la chaîne de caractères suivante: "Le cours de programmation est le meilleur cours de l'univers"
+- [Codage de Huffman](https://fr.wikipedia.org/wiki/Codage_de_Huffman)
