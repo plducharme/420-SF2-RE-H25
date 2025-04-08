@@ -11,7 +11,6 @@
    - Ensuite lire le reste du fichier et afficher la grandeur du restant.
 
 3) Compression de fichier
-   - Créer un fichier gzip citations.txt.gz qui contient tous les fichiers créés à l'étape 1
    - Créer un fichier zip citations.zip qui contient tous les fichiers créés à l'étape 1
    - Créer un fichier tar citations.tar.gz qui contient tous les fichiers créés à l'étape 1
    - Créer un fichier tar citations.tar.bz2 qui contient tous les fichiers créés à l'étape 1
