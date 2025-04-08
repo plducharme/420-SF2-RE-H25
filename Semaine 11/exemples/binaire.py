@@ -21,6 +21,11 @@ with open('cc.xlarge.png', 'rb') as image_reader:
     eol = image_reader.read(1)
     print(eol)
 
+with open("fichier_binaire.pld", "wb") as fichier_bin:
+    # Écriture d'une chaîne de caractères dans le fichier
+    fichier_bin.write(b"Texte en octets")
+    # Écriture d'une liste de chaînes de caractères dans le fichier
+    fichier_bin.writelines([b"Texte en octets", bytes.fromhex("2Ef0 F1f2")])
 
 
 
