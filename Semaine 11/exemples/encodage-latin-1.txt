@@ -1,0 +1,1 @@
+Ceci est un texte qui utilise seulement des caractères ASCII.
