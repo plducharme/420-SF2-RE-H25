@@ -50,6 +50,8 @@ class Tas:
             # Si son parent est plus petit que lui, on l'échange
             if self.liste[index] > self.liste[index_parent]:
                 self.liste[index], self.liste[index_parent] = self.liste[index_parent], self.liste[index]
+                # On a échangé le fils et le père, on doit maintenant vérifier si le nouveau père (ancien fils) est à
+                # sa place
                 index = index_parent
             else:
                 # Si le parent est plus grand, on a un tas max valide, on arrête la boucle
