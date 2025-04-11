@@ -1,4 +1,5 @@
 import heapq
+import struct
 
 
 # Classe représentant un noeud de l'arbre de Huffman
@@ -106,20 +107,76 @@ class NoeudHuffman:
 
         return texte_decode
 
+    # Méthode pour écrire le code binaire dans un fichier avec des bits
+    # On compresse sur disque
+    @staticmethod
+    def ecrire_code_binaire_fichier(code_binaire, nom_fichier):
+        with open(nom_fichier, "wb") as f:
+            # On ajoute des bits pour que la longueur soit un multiple de 8
+            padded_bit_string = code_binaire + '0' * ((8 - len(code_binaire) % 8) % 8)
+            # On convertit le code binaire en tableau d'octets
+            tableau_binaire = bytes(int(padded_bit_string[i:i+8], 2) for i in range(0, len(padded_bit_string), 8))
+            # On écrit le tableau binaire dans le fichier
+            f.write(tableau_binaire)
+
+    # Méthode pour lire le code binaire à partir d'un fichier
+    # On décompresse à partir du fichier
+    # Pour le faire exactement, il faudrait savoir combien de bits on a ajouté pour le padding
+    # (i.e passer la taille originale)
+    @staticmethod
+    def lire_code_binaire_fichier(nom_fichier, taille_originale=None):
+        with open(nom_fichier, "rb") as f:
+            # On lit le tableau binaire du fichier
+            tableau_binaire = f.read()
+            # On convertit le tableau binaire en code binaire
+            code_binaire_str = ''.join(f"{byte:08b}" for byte in tableau_binaire)
+        if taille_originale is not None:
+            # On enlève le padding
+            code_binaire_str = code_binaire_str[:taille_originale]
+        return code_binaire_str
+
 
 if __name__ == "__main__":
-    texte_a_encoder = "Le cours de programmation est le meilleur cours de l'univers"
-    print("Texte à encoder : ", texte_a_encoder)
-    racine = NoeudHuffman.batir_arbre_huffman(NoeudHuffman.calculer_frequences(texte_a_encoder))
-    # On génère le code de Huffman à partir de l'arbre
-    codes_huffman = NoeudHuffman.generer_code_huffman(racine)
-    print("Codes de Huffman : ", codes_huffman)
-    # On encode le texte en utilisant le code de Huffman
-    code_binaire = NoeudHuffman.encoder(texte_a_encoder, codes_huffman)
-    print("Code binaire : ", code_binaire)
-    # On décode le code binaire en utilisant l'arbre de Huffman
-    texte_decode = NoeudHuffman.decoder(code_binaire, racine)
-    print("Texte décodé : ", texte_decode)
-    print("Grandeur du texte original : ", len(texte_a_encoder))
-    print("Grandeur du texte encodé : ", len(code_binaire))
-    print("Taux de compression : ", len(code_binaire) / len(texte_a_encoder))
+    texte_ex = "Le cours de programmation est le meilleur cours de l'univers"
+
+    def encoder_decoder(texte_a_encoder, afficher_texte=True):
+        if afficher_texte:
+            print("Texte à encoder : ", texte_a_encoder)
+
+        racine = NoeudHuffman.batir_arbre_huffman(NoeudHuffman.calculer_frequences(texte_a_encoder))
+        # On génère le code de Huffman à partir de l'arbre
+        codes_huffman = NoeudHuffman.generer_code_huffman(racine)
+        print("Codes de Huffman : ", codes_huffman)
+        # On encode le texte en utilisant le code de Huffman
+        code_binaire = NoeudHuffman.encoder(texte_a_encoder, codes_huffman)
+        # Ceci est la représentation binaire mais sous forme de texte
+        # Donc chaque "bit" est un caractère, donc 8 bits
+        # Dans la réalité, pour encoder, on aurait besoin de convertir la représentation dans un tableau de bits
+        if afficher_texte:
+            print("Code binaire : ", code_binaire)
+
+        # On décode le code binaire en utilisant l'arbre de Huffman
+        texte_decode = NoeudHuffman.decoder(code_binaire, racine)
+        if afficher_texte:
+            print("Texte décodé : ", texte_decode)
+        print("Grandeur du texte original : ", len(texte_a_encoder))
+        print("Grandeur du texte encodé (sans padding): ", len(code_binaire) / 8)
+        print("Taux de compression : ", (len(code_binaire) / 8) / len(texte_a_encoder))
+        return racine, code_binaire
+
+    encoder_decoder(texte_ex)
+    # On teste avec un texte plus long
+    with open("les_miserables.txt", "r", encoding="utf-8") as f:
+        texte_long = f.read()
+        racine, code_binaire_miserable = encoder_decoder(texte_long, False)
+        # On va le compresser sur disque en binaire
+        NoeudHuffman.ecrire_code_binaire_fichier(code_binaire_miserable, "les_miserables.bin")
+        # On va le décompresser sur disque
+        code_binaire = NoeudHuffman.lire_code_binaire_fichier("les_miserables.bin", len(code_binaire_miserable))
+        # On va le décoder
+        texte_decode = NoeudHuffman.decoder(code_binaire, racine)
+        print("Longueur du texte décodé : ", len(texte_decode))
+
+
+
+

@@ -1,4 +1,4 @@
-with open('proverbes.txt', 'w', encoding="utf8") as writer:
+with open('proverbes.txt', 'wt', encoding="utf8") as writer:
     # Écrire une string dans le fichier
     writer.write('Folle est la brebis qui au loup se confesse\n')
 
