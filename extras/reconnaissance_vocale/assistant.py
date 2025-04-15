@@ -1,10 +1,13 @@
 # https://www.geeksforgeeks.org/personal-voice-assistant-in-python/
 import os
-
+# module pour la reconnaissance vocale (package SpeechRecognition)
 import speech_recognition as sr
+# module pour la traduction
 from googletrans import Translator
-import playsound3  # to play saved mp3 file
-from gtts import gTTS  # google text to speech
+# module pour jouer le son en mp3 (package playsound3 + PyAudio)
+import playsound3
+# module pour la synthèse vocale (text-to-speech)
+from gtts import gTTS
 
 
 class Amanda:
@@ -20,11 +23,11 @@ class Amanda:
         playsound3.playsound(fichier)
         os.remove(fichier)
 
-    def enregister_usager(self):
+    def enregister_usager(self, timeout=5):
         r = sr.Recognizer()
         with sr.Microphone() as source:
             print("Ecoute...")
-            audio = r.listen(source, timeout=5)
+            audio = r.listen(source, timeout=timeout)
             try:
                 texte = r.recognize_google(audio, language='ca-FR')
             except:
@@ -53,7 +56,7 @@ class Amanda:
     def boucle(self):
         while True:
             amanda.amanda_dit("Je suis Amanda, votre assistante personnelle. Comment puis-je vous aider?")
-            texte = self.enregister_usager()
+            texte = self.enregister_usager(10)
             if texte is not None:
                 self.executer_commande(texte)
 
