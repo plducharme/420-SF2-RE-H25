@@ -25,7 +25,6 @@ class Bibliotheque:
             raise ValueError(f"Le livre '{titre}' n'a pas été emprunté.")
         self.livres[titre]["disponible"] = True
 
-
     def disponibilite_livres(self):
         """Retourne une lsite de tuples avec le titre et la disponibilité des livres."""
         if not self.livres:
