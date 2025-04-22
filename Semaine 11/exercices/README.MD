@@ -12,7 +12,7 @@
 
 3) Compression de fichier
    - Créer un fichier zip citations.zip qui contient tous les fichiers créés à l'étape 1
-   - Créer un fichier tar citations.tar.gz qui contient tous les fichiers créés à l'étape 1
-   - Créer un fichier tar citations.tar.bz2 qui contient tous les fichiers créés à l'étape 1
+   - Créer un fichier tar/gz citations.tar.gz qui contient tous les fichiers créés à l'étape 1
+   - Créer un fichier tar/bz2 citations.tar.bz2 qui contient tous les fichiers créés à l'étape 1
 
 
