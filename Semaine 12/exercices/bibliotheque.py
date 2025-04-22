@@ -16,7 +16,6 @@ class Bibliotheque:
             raise ValueError(f"Le livre '{titre}' est déjà emprunté.")
         self.livres[titre]["disponible"] = False
 
-
     def retourner_livre(self, titre):
         """Permet de retourner un livre emprunté."""
         if titre not in self.livres:
