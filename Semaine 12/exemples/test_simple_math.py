@@ -47,7 +47,5 @@ class SimpleMathTestCase(unittest.TestCase):
         self.assertAlmostEqual(SimpleMath.division(10, 3), 3.333, places=3)
 
 
-
-
 if __name__ == '__main__':
     unittest.main()
