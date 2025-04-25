@@ -29,7 +29,7 @@ class EtudiantParser:
         no_da = etudiant_noeud.getElementsByTagName("numeroDa")[0].firstChild.data
         cours_inscrits = []
         for cours_noeud in etudiant_noeud.getElementsByTagName("cours")[0].getElementsByTagName("inscrit"):
-           cours_inscrits.append(EtudiantParser.handle_cours(cours_noeud))
+            cours_inscrits.append(EtudiantParser.handle_cours(cours_noeud))
         return Etudiant(nom, prenom, no_da, cours_inscrits)
 
     @staticmethod
