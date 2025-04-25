@@ -14,3 +14,4 @@ Utiliser matplotlib pour générer un graphique avec les températures max et mi
 # organisations_csv.py
 Lire le csv fournit et créer un document json "organisations.json" correspondant avec les données contenues.
 
+Dans un deuxième temps, utiliser pandas pour manipuler le csv et ses données.
