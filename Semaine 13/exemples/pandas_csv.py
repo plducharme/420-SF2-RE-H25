@@ -27,3 +27,7 @@ for index, ligne in df.iterrows():
 # Écrire le DataFrame dans un fichier CSV
 # Si index=True, le DataFrame sera écrit avec l'index (comme première colonne)
 df.to_csv("chien_export.csv", sep=";", encoding="utf8", index=False)
+# Écrire le DataFrame dans un fichier Excel
+df.to_excel("chien_export.xlsx", index=False)
+# Écrire le DataFrame dans un fichier JSON
+df.to_json("chien_export.json", orient="records", lines=True)

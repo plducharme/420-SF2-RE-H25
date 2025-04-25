@@ -1,7 +1,7 @@
 import csv
 
 # Lecture d'un fichier CSV directement
-with open('exemple.csv', 'r') as csv_file:
+with open('exemple.csv', 'rt') as csv_file:
     csv_reader = csv.reader(csv_file)
     for ligne in csv_reader:
         # On peut utiliser l'index des colonnes
