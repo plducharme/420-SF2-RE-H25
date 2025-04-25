@@ -24,3 +24,6 @@ print("\nLignes d'itération")
 for index, ligne in df.iterrows():
     print(f"{index}:\t{ligne["Nom"]}\t{ligne['Race']}\t{ligne['Couleur']}")
 
+# Écrire le DataFrame dans un fichier CSV
+# Si index=True, le DataFrame sera écrit avec l'index (comme première colonne)
+df.to_csv("chien_export.csv", sep=";", encoding="utf8", index=False)
